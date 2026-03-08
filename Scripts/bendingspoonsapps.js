@@ -104,7 +104,7 @@ switch ($request.url) {
 			}
 		};
         break;
-	case findUrl(/paperios.oracle/):
+	case findUrl(/paperios\.oracle/):
     obj.me.active_subscriptions_ids =  ["com.wetransfer.paper.pro.yearly"];
 		obj.result.licenses = [
     {
