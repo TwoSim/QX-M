@@ -3,7 +3,7 @@
 [MITM]
 hostname= %APPEND% *.oracle.bendingspoonsapps.com
 [Script]
-Bendingspoonsapps = type=http-response,pattern=^https:\/\/.+\.oracle\.bendingspoonsapps\.com\/v2\/(purchases\/sign\/apple|purchases\/verify\/apple|users\/setup|users\/legal)$,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/TwoSim/QX-M/refs/heads/main/Scripts/bendingspoonsapps.js,script-update-interval=-1
+Bendingspoonsapps = type=http-response,pattern=^https:\/\/.+\.oracle\.bendingspoonsapps\.com\/v2\/,requires-body=0,max-size=0,script-path=https://raw.githubusercontent.com/TwoSim/QX-M/refs/heads/main/Scripts/bendingspoonsapps.js,script-update-interval=-1
 
 
 let body = $response.body.replace(/\"__is_free__\":false/, "\"__is_free__\":true");
