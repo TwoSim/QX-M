@@ -105,26 +105,27 @@ switch ($request.url) {
 		};
         break;
 	case findUrl(/paperios\.oracle/):
-    obj.me.active_subscriptions_ids =  ["com.wetransfer.paper.pro.yearly"];
-		obj.result.licenses = [
-    {
-        "autoRenewing": false,
-        "benefits": [
-            "pro"
-        ],
-        "details": null,
-        "expires": 32503680000000,
-        "label": "pro",
-        "linkStatus": "linked-current",
-        "orderNumber": null,
-        "period": "lifetime",
-        "productId": "com.fiftythree.paper.pro_12",
-        "store": "app_store",
-        "type": "purchase",
-        "valid": true
-    }
-];
-    break;
+	    obj.me = obj.me || {};
+	    obj.result = obj.result || {};
+	
+	    obj.me.active_subscriptions_ids = ["com.wetransfer.paper.pro.yearly"];
+	    obj.result.licenses = [
+	        {
+	            autoRenewing: false,
+	            benefits: ["pro"],
+	            details: null,
+	            expires: 32503680000000,
+	            label: "pro",
+	            linkStatus: "linked-current",
+	            orderNumber: null,
+	            period: "lifetime",
+	            productId: "com.fiftythree.paper.pro_12",
+	            store: "app_store",
+	            type: "purchase",
+	            valid: true
+	        }
+	    ];
+	    break;
 }
 
 $done({
